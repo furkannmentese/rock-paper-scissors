@@ -3,6 +3,7 @@ import Header from '../components/Header.vue'
 import Game from '../components/Game.vue'
 import Footer from '../components/Footer.vue'
 import ResultStepOne from '../components/ResultStepOne.vue'
+import ResultStepTwo from '../components/ResultStepTwo.vue'
 import { useGameStore } from '../stores/game.store'
 
 const gameStore = useGameStore()
@@ -13,6 +14,7 @@ const gameStore = useGameStore()
     <Header />
     <Game v-if="gameStore.gameState === 'choosing'" />
     <ResultStepOne v-if="gameStore.gameState === 'playing' || gameStore.gameState === 'house-playing'" />
+    <ResultStepTwo v-if="gameStore.gameState === 'result'" />
     <Footer />
   </div>
 </template>

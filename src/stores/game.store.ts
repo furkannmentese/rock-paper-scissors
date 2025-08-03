@@ -89,5 +89,11 @@ export const useGameStore = defineStore('game', {
     incrementScore(): void {
       this.score++
     },
+
+    resetGame(): void {
+      this.gameState = 'choosing'
+      this.userChoice = null
+      this.houseChoice = null
+    },
   },
 })
