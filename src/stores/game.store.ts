@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 export const GAME_CHOICES = ['rock', 'paper', 'scissors'] as const
 export const GAME_RESULTS = ['You Win', 'You Lose', 'Draw'] as const
-export const GAME_STATES = ['choosing', 'playing', 'result'] as const
+export const GAME_STATES = ['choosing', 'playing', 'house-playing', 'result'] as const
 
 export type GameChoice = (typeof GAME_CHOICES)[number]
 export type GameResult = (typeof GAME_RESULTS)[number]
@@ -46,6 +46,10 @@ export const useGameStore = defineStore('game', {
       return this.gameState === 'playing'
     },
 
+    isHousePlaying(): boolean {
+      return this.gameState === 'house-playing'
+    },
+
     isResult(): boolean {
       return this.gameState === 'result'
     },
@@ -59,6 +63,13 @@ export const useGameStore = defineStore('game', {
       await new Promise<void>((resolve) => {
         setTimeout(() => {
           this.houseChoice = this.generateRandomChoice()
+          this.gameState = 'house-playing'
+          resolve()
+        }, 1000)
+      })
+
+      await new Promise<void>((resolve) => {
+        setTimeout(() => {
           this.gameState = 'result'
 
           if (this.gameResult === 'You Win') {
