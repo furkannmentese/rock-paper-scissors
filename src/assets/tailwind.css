@@ -13,6 +13,10 @@
 }
 
 @layer utilities {
+  .bg-gradient-radial {
+    background: var(--gradient-game-bg);
+  }
+
   .choice-paper::before {
     background-color: var(--color-paper-bg);
     box-shadow: 0 0.5rem var(--color-paper-shadow);
@@ -26,9 +30,5 @@
   .choice-rock::before {
     background-color: var(--color-rock-bg);
     box-shadow: 0 0.5rem var(--color-rock-shadow);
-  }
-
-  .bg-gradient-radial {
-    background: var(--gradient-game-bg);
   }
 }
