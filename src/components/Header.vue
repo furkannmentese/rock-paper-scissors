@@ -1,0 +1,21 @@
+<script setup lang="ts"></script>
+
+<template>
+  <div class="relative max-w-[700px] mx-auto pt-8">
+    <header
+      class="flex justify-between items-center h-[150px] border-[3px] border-[#FFFFFF4A] rounded-[20px] px-6 pl-8 py-4"
+    >
+      <img src="/images/logo.svg" alt="logo" class="h-[92.68px] w-[155.47px] relative top-1" />
+      <div
+        class="flex flex-col items-center justify-center bg-white rounded-[10px] w-[150px] h-full leading-none"
+      >
+        <div class="text-[1.1rem] font-bold tracking-[1.5px] text-[#2A45C2] uppercase font-display">
+          score
+        </div>
+        <div class="text-[4rem] text-center font-bold text-[#3B4363] font-display">
+          12
+        </div>
+      </div>
+    </header>
+  </div>
+</template>

@@ -1,8 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Header from '../components/Header.vue'
+</script>
 
 <template>
   <div class="min-h-screen bg-gradient-radial relative overflow-hidden pb-32">
-    <h1 class="text-white text-4xl font-bold">Hello World</h1>
+    <Header />
   </div>
 </template>
 
