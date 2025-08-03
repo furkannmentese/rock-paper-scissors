@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import MainLayout from '@/layouts/MainLayout.vue'
+</script>
 
 <template>
-  <h1 class="text-green-500 text-4xl font-bold">Hello World</h1>
+  <MainLayout />
 </template>
 
 <style scoped></style>
