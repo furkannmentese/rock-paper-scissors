@@ -2,8 +2,33 @@
 
 @theme {
   --font-display: 'Barlow Semi Condensed', 'sans-serif';
+  --gradient-game-bg: radial-gradient(at top, #1f3757, #131537);
+  --color-paper-bg: #4664f4;
+  --color-paper-shadow: #2a45c2;
+  --color-scissors-bg: #eb9f0e;
+  --color-scissors-shadow: #c76c1b;
+  --color-rock-bg: #db2e4d;
+  --color-rock-shadow: #9d1634;
+  --color-focus-ring: #223351;
 }
 
-.bg-gradient-radial {
-  background: radial-gradient(at top, #1f3757, #131537);
+@layer utilities {
+  .choice-paper::before {
+    background-color: var(--color-paper-bg);
+    box-shadow: 0 0.5rem var(--color-paper-shadow);
+  }
+
+  .choice-scissors::before {
+    background-color: var(--color-scissors-bg);
+    box-shadow: 0 0.5rem var(--color-scissors-shadow);
+  }
+
+  .choice-rock::before {
+    background-color: var(--color-rock-bg);
+    box-shadow: 0 0.5rem var(--color-rock-shadow);
+  }
+
+  .bg-gradient-radial {
+    background: var(--gradient-game-bg);
+  }
 }
