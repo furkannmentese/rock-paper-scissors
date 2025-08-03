@@ -1,4 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useGameStore } from '../stores/game.store'
+const gameStore = useGameStore()
+</script>
 
 <template>
   <div class="relative max-w-[700px] mx-auto pt-8">
@@ -13,7 +16,7 @@
           score
         </div>
         <div class="text-[4rem] text-center font-bold text-[#3B4363] font-display">
-          12
+          {{ gameStore.score }}
         </div>
       </div>
     </header>

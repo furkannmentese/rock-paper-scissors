@@ -1,5 +1,14 @@
 <script setup lang="ts">
 import { choices } from '../data/choices'
+import { useGameStore, type GameChoice } from '../stores/game.store'
+
+const gameStore = useGameStore()
+
+function handleChoiceClick(choiceName: string) {
+  if (gameStore.isChoosing) {
+    gameStore.makeChoice(choiceName as GameChoice)
+  }
+}
 </script>
 
 <template>
@@ -18,6 +27,7 @@ import { choices } from '../data/choices'
           'focus:after:content-[\'\'] focus:after:absolute focus:after:-left-[15%] focus:after:-top-[15%] focus:after:w-[130%] focus:after:h-[130%] focus:after:rounded-full focus:after:shadow-[0_0_0_2rem_#223351] focus:after:z-0',
         ]"
         :style="{ gridArea: choice.gridArea }"
+        @click="handleChoiceClick(choice.name)"
       >
         <div
           :class="[
