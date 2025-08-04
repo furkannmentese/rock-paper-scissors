@@ -15,7 +15,7 @@ const closeDialog = () => {
 <template>
   <footer class="absolute bottom-8 right-8 z-10">
     <button
-      class="border-1 border-white text-white uppercase tracking-[2.5px] text-sm font-display px-6 py-2 rounded-lg hover:bg-white hover:text-[#3B4363]"
+      class="cursor-pointer border-1 border-white text-white uppercase tracking-[2.5px] text-sm font-display px-6 py-2 rounded-lg hover:bg-white hover:text-[#3B4363]"
       @click="openDialog"
     >
       Rules
@@ -27,7 +27,7 @@ const closeDialog = () => {
     >
       <div class="bg-white rounded-2xl max-w-md w-full mx-12 p-8 relative">
         <button
-          class="absolute top-10 right-6 w-8 h-8 flex items-center justify-center hover:opacity-70"
+          class="cursor-pointer absolute top-10 right-6 w-8 h-8 flex items-center justify-center hover:opacity-70"
           @click="closeDialog"
         >
           <img 
