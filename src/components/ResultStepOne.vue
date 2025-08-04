@@ -28,11 +28,11 @@ const houseChoiceImg = computed(() => getChoiceData(gameStore.houseChoice)?.img 
         'relative',
         'before:absolute before:-left-[15%] before:-top-[15%] before:w-[130%] before:h-[130%] before:rounded-full before:z-[1]',
         'after:absolute after:-left-[15%] after:-top-[15%] after:w-[130%] after:h-[130%] after:rounded-full after:z-[1]',
-        'focus:after:shadow-[0_0_0_2rem_#223351] focus:after:z-0'
+        'focus:after:shadow-[0_0_0_2rem_var(--color-focus-ring)] focus:after:z-0'
       ]"
     >
       <div
-        class="choice relative w-60 h-60 bg-white rounded-full grid place-items-center shadow-[inset_0_0.5rem_#00000026] z-[2]"
+        class="choice relative w-60 h-60 bg-white rounded-full grid place-items-center shadow-[inset_0_0.5rem_var(--color-shadow-black)] z-[2]"
         :class="[gameStore.userChoice]"
       >
         <img 
@@ -45,7 +45,7 @@ const houseChoiceImg = computed(() => getChoiceData(gameStore.houseChoice)?.img 
 
     <div
       v-if="!gameStore.houseChoice"
-      class="relative before:absolute before:-left-[15%] before:-top-[15%] before:w-[130%] before:h-[130%] before:rounded-full before:bg-[#16213d]"
+      class="relative before:absolute before:-left-[15%] before:-top-[15%] before:w-[130%] before:h-[130%] before:rounded-full before:bg-[var(--color-dark-blue)]"
     >
       <div class="choice relative w-50 h-50"></div>
     </div>
@@ -57,11 +57,11 @@ const houseChoiceImg = computed(() => getChoiceData(gameStore.houseChoice)?.img 
         'relative',
         'before:absolute before:-left-[15%] before:-top-[15%] before:w-[130%] before:h-[130%] before:rounded-full before:z-[1]',
         'after:absolute after:-left-[15%] after:-top-[15%] after:w-[130%] after:h-[130%] after:rounded-full after:z-[1]',
-        'focus:after:shadow-[0_0_0_2rem_#223351] focus:after:z-0'
+        'focus:after:shadow-[0_0_0_2rem_var(--color-focus-ring)] focus:after:z-0'
       ]"
     >
       <div
-        class="choice relative w-60 h-60 bg-white rounded-full grid place-items-center shadow-[inset_0_0.5rem_#00000026] z-[2]"
+        class="choice relative w-60 h-60 bg-white rounded-full grid place-items-center shadow-[inset_0_0.5rem_var(--color-shadow-black)] z-[2]"
         :class="[gameStore.houseChoice]"
       >
         <img 

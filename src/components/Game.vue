@@ -25,7 +25,7 @@ function handleChoiceClick(choiceName: string) {
           'relative',
           'cursor-pointer',
           'before:absolute before:-left-[15%] before:-top-[15%] before:w-[130%] before:h-[130%] before:rounded-full before:z-[1]',
-          'hover:after:content-[\'\'] hover:after:absolute hover:after:-left-[15%] hover:after:-top-[15%] hover:after:w-[130%] hover:after:h-[130%] hover:after:rounded-full hover:after:shadow-[0_0_0_2rem_#223351] hover:after:z-0',
+          'hover:after:content-[\'\'] hover:after:absolute hover:after:-left-[15%] hover:after:-top-[15%] hover:after:w-[130%] hover:after:h-[130%] hover:after:rounded-full hover:after:shadow-[0_0_0_2rem_var(--color-focus-ring)] hover:after:z-0',
         ]"
         :style="{ gridArea: choice.gridArea }"
         @click="handleChoiceClick(choice.name)"
@@ -33,7 +33,7 @@ function handleChoiceClick(choiceName: string) {
         <div
           :class="[
             'choice',
-            'relative w-40 h-40 bg-white rounded-full grid place-items-center shadow-[inset_0_0.5rem_#00000026] z-[2]',
+            'relative w-40 h-40 bg-white rounded-full grid place-items-center shadow-[inset_0_0.5rem_var(--color-shadow-black)] z-[2]',
           ]"
         >
           <img :src="choice.img" :alt="choice.alt" class="scale-150 relative z-[1]" />

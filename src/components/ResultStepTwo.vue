@@ -32,14 +32,14 @@ function playAgain() {
         'relative',
         'before:absolute before:-left-[15%] before:-top-[15%] before:w-[130%] before:h-[130%] before:rounded-full before:z-[1]',
         'after:absolute after:-left-[15%] after:-top-[15%] after:w-[130%] after:h-[130%] after:rounded-full after:z-[1]',
-        'focus:after:shadow-[0_0_0_2rem_#223351] focus:after:z-0',
+        'focus:after:shadow-[0_0_0_2rem_var(--color-focus-ring)] focus:after:z-0',
         gameStore.gameResult === 'You Win'
           ? 'after:content-[\'\'] after:absolute after:-left-[15%] after:-top-[15%] after:w-[130%] after:h-[130%] after:rounded-full after:shadow-[0_0_0_60px_rgba(255,255,255,0.05),0_0_0_120px_rgba(255,255,255,0.05),0_0_0_180px_rgba(255,255,255,0.05)] after:z-0'
           : '',
       ]"
     >
       <div
-        class="choice relative w-60 h-60 bg-white rounded-full grid place-items-center shadow-[inset_0_0.5rem_#00000026] z-[2]"
+        class="choice relative w-60 h-60 bg-white rounded-full grid place-items-center shadow-[inset_0_0.5rem_var(--color-shadow-black)] z-[2]"
         :class="[gameStore.userChoice]"
       >
         <img
@@ -55,8 +55,8 @@ function playAgain() {
         {{ gameStore.gameResult }}
       </h3>
       <button
-        class="bg-white border-2 border-transparent rounded-[0.6rem] px-14 py-3 font-display text-xl tracking-[0.1em] cursor-pointer uppercase font-bold hover:border-[#223351] focus:border-[#223351] focus:outline-none transition-colors"
-        :class="[gameStore.gameResult !== 'You Lose' ? 'text-[#3B4363]' : 'text-[#DB2E4D]']"
+        class="bg-white border-2 border-transparent rounded-[0.6rem] px-14 py-3 font-display text-xl tracking-[0.1em] cursor-pointer uppercase font-bold hover:border-[var(--color-focus-ring)] focus:border-[var(--color-focus-ring)] focus:outline-none transition-colors"
+        :class="[gameStore.gameResult !== 'You Lose' ? 'text-[var(--color-text-dark)]' : 'text-[var(--color-rock-bg)]']"
         @click="playAgain"
       >
         PLAY AGAIN
@@ -69,14 +69,14 @@ function playAgain() {
         'relative',
         'before:absolute before:-left-[15%] before:-top-[15%] before:w-[130%] before:h-[130%] before:rounded-full before:z-[1]',
         'after:absolute after:-left-[15%] after:-top-[15%] after:w-[130%] after:h-[130%] after:rounded-full after:z-[1]',
-        'focus:after:shadow-[0_0_0_2rem_#223351] focus:after:z-0',
+        'focus:after:shadow-[0_0_0_2rem_var(--color-focus-ring)] focus:after:z-0',
         gameStore.gameResult === 'You Lose'
           ? 'after:content-[\'\'] after:absolute after:-left-[15%] after:-top-[15%] after:w-[130%] after:h-[130%] after:rounded-full after:shadow-[0_0_0_60px_rgba(255,255,255,0.05),0_0_0_120px_rgba(255,255,255,0.05),0_0_0_180px_rgba(255,255,255,0.05)] after:z-0'
           : '',
       ]"
     >
       <div
-        class="choice relative w-60 h-60 bg-white rounded-full grid place-items-center shadow-[inset_0_0.5rem_#00000026] z-[2]"
+        class="choice relative w-60 h-60 bg-white rounded-full grid place-items-center shadow-[inset_0_0.5rem_var(--color-shadow-black)] z-[2]"
         :class="[gameStore.houseChoice]"
       >
         <img 

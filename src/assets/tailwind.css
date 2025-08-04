@@ -10,6 +10,10 @@
   --color-rock-bg: #db2e4d;
   --color-rock-shadow: #9d1634;
   --color-focus-ring: #223351;
+  --color-dark-blue: #16213d;
+  --color-text-dark: #3B4363;
+  --color-border-white: #FFFFFF4A;
+  --color-shadow-black: #00000026;
 }
 
 @layer utilities {

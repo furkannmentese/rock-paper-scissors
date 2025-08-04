@@ -15,7 +15,7 @@ const closeDialog = () => {
 <template>
   <footer class="absolute bottom-8 right-8 z-10">
     <button
-      class="cursor-pointer border-1 border-white text-white uppercase tracking-[2.5px] text-sm font-display px-6 py-2 rounded-lg hover:bg-white hover:text-[#3B4363]"
+      class="cursor-pointer border-1 border-white text-white uppercase tracking-[2.5px] text-sm font-display px-6 py-2 rounded-lg hover:bg-white hover:text-[var(--color-text-dark)]"
       @click="openDialog"
     >
       Rules
@@ -38,7 +38,7 @@ const closeDialog = () => {
         </button>
 
         <h2
-          class="text-[#3B4363] text-[32px] font-bold font-display uppercase tracking-wider text-left mb-10"
+          class="text-[var(--color-text-dark)] text-[32px] font-bold font-display uppercase tracking-wider text-left mb-10"
         >
           Rules
         </h2>
