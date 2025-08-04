@@ -12,9 +12,9 @@ const gameStore = useGameStore()
 <template>
   <div class="min-h-screen bg-gradient-radial relative overflow-hidden pb-32">
     <Header />
-    <Game v-if="gameStore.gameState === 'choosing'" />
-    <ResultStepOne v-if="gameStore.gameState === 'playing' || gameStore.gameState === 'house-playing'" />
-    <ResultStepTwo v-if="gameStore.gameState === 'result'" />
+    <Game v-if="gameStore.isChoosing" />
+    <ResultStepOne v-if="gameStore.isPlaying || gameStore.isHousePlaying" />
+    <ResultStepTwo v-if="gameStore.isResult" />
     <Footer />
   </div>
 </template>
