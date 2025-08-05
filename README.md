@@ -1,9 +1,13 @@
-# rock-paper-scissors
+# ✊🖐✌ Rock-Paper-Scissors - Vue3 Game
 
 ## Live Demo
 
 You can access the live demo from the link below:  
 🔗 [https://rock-paper-scissors-green-rho.vercel.app/](https://rock-paper-scissors-green-rho.vercel.app/)
+
+## 🖼️ Screenshot
+
+![game screen](docs/screenshot.png)
 
 ## Project Setup
 
