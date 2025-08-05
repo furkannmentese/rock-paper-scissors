@@ -12,9 +12,9 @@ function handleChoiceClick(choiceName: string) {
 </script>
 
 <template>
-  <div class="relative max-w-[700px] mx-auto pt-8">
+  <div class="relative max-w-[700px] mx-auto pt-8 px-6 sm:px-0">
     <section
-      class="game relative grid place-items-center h-[30rem] pt-16 before:absolute before:w-full before:h-full before:left-[28%] before:top-[35%] before:bg-[url('/images/bg-triangle.svg')] before:bg-no-repeat before:z-0"
+      class="game relative grid place-items-center h-[30rem] pt-16 before:absolute before:w-full before:h-full before:left-[28%] before:top-[35%] before:bg-[url('/images/bg-triangle.svg')] before:bg-no-repeat before:z-0 max-sm:before:left-[50%] max-sm:before:top-[55%] max-sm:before:-translate-x-1/2 max-sm:before:-translate-y-1/2 max-sm:before:bg-center max-sm:before:bg-[length:200px_180px] max-sm:before:bg-[url('/images/bg-triangle-mobile.svg')]"
     >
       <button
         v-for="choice in choices"
@@ -33,10 +33,10 @@ function handleChoiceClick(choiceName: string) {
         <div
           :class="[
             'choice',
-            'relative w-40 h-40 bg-white rounded-full grid place-items-center shadow-[inset_0_0.5rem_var(--color-shadow-black)] z-[2]',
+            'relative w-30 h-30 sm:w-40 sm:h-40 bg-white rounded-full grid place-items-center shadow-[inset_0_0.5rem_var(--color-shadow-black)] z-[2]',
           ]"
         >
-          <img :src="choice.img" :alt="choice.alt" class="scale-150 relative z-[1]" />
+          <img :src="choice.img" :alt="choice.alt" class="scale-90 sm:scale-150 relative z-[1]" />
         </div>
       </button>
     </section>
